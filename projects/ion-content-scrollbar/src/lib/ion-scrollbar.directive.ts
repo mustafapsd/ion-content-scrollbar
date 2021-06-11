@@ -8,6 +8,9 @@ export class IonScrollbarDirective implements AfterViewInit {
   @Input() scrollbarWidth = 3;
   @Input() scrollbarColor = 'var(--ion-color-primary)';
   @Input() scrollbarRound = true;
+  @Input() firefoxThin = true;
+  @Input() firefoxBackground = 'transparent';
+  @Input() firefoxThumbColor = 'var(--ion-color-primary)';
 
 
   constructor(
@@ -20,9 +23,9 @@ export class IonScrollbarDirective implements AfterViewInit {
 
       const style = document.createElement('style');
       // eslint-disable-next-line max-len
-      style.innerHTML = `*::-webkit-scrollbar { width: ${this.scrollbarWidth}px; height: ${this.scrollbarWidth}px; }`;
+      style.innerHTML = `*::-webkit-scrollbar { width: ${this.scrollbarWidth}px; height: ${this.scrollbarWidth}px; } *{ scrollbar-width: ${this.firefoxThin ? 'thin' : 'auto'} }`;
       style.innerHTML += `*::-webkit-scrollbar-thumb { border-radius: ${this.scrollbarRound ? '7rem' : '0'}; 
-      background: ${this.scrollbarColor}; }`;
+      background: ${this.scrollbarColor}; } * {scrollbar-color: ${this.firefoxThumbColor} ${this.firefoxBackground}}`;
 
       SHADOW.appendChild(style);
     } catch {
