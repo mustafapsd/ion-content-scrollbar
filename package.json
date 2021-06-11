@@ -1,6 +1,9 @@
 {
-  "name": "ion-content-scrollbar-customization",
-  "version": "0.0.0",
+  "name": "ion-content-scrollbar",
+  "version": "0.0.10",
+  "repository": {
+    "url": "https://github.com/mustafapsd/ion-content-scrollbar"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -23,6 +26,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~12.0.4",
     "@angular/cli": "~12.0.3",
     "@angular/compiler-cli": "~12.0.3",
     "@types/jasmine": "~3.6.0",
@@ -33,6 +37,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^12.0.0",
     "typescript": "~4.2.3"
   }
 }

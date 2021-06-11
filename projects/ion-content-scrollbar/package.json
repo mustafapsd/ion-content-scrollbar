@@ -1,0 +1,14 @@
+{
+  "name": "ion-content-scrollbar",
+  "version": "0.0.10",
+  "repository": {
+    "url": "https://github.com/mustafapsd/ion-content-scrollbar"
+  },
+  "peerDependencies": {
+    "@angular/common": "^12.0.4",
+    "@angular/core": "^12.0.4"
+  },
+  "dependencies": {
+    "tslib": "^2.1.0"
+  }
+}

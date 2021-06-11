@@ -1,7 +1,42 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "e520a79f-2846-4170-be75-4c240d8ab468"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ion-content-scrollbar": {
+      "projectType": "library",
+      "root": "projects/ion-content-scrollbar",
+      "sourceRoot": "projects/ion-content-scrollbar/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ion-content-scrollbar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ion-content-scrollbar/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ion-content-scrollbar/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ion-content-scrollbar/src/test.ts",
+            "tsConfig": "projects/ion-content-scrollbar/tsconfig.spec.json",
+            "karmaConfig": "projects/ion-content-scrollbar/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ion-content-scrollbar"
 }

@@ -8,6 +8,12 @@
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "ion-content-scrollbar": [
+        "dist/ion-content-scrollbar/ion-content-scrollbar",
+        "dist/ion-content-scrollbar"
+      ]
+    },
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
