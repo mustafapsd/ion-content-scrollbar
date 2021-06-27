@@ -26,7 +26,7 @@ export class IonScrollbarDirective implements AfterViewInit {
       style.innerHTML = `*::-webkit-scrollbar { width: ${this.scrollbarWidth}px; height: ${this.scrollbarWidth}px; } *{ scrollbar-width: ${this.firefoxThin ? 'thin' : 'auto'} }`;
       style.innerHTML += `*::-webkit-scrollbar-thumb { border-radius: ${this.scrollbarRound ? '7rem' : '0'}; 
       background: ${this.scrollbarColor}; } * {scrollbar-color: ${this.firefoxThumbColor} ${this.firefoxBackground}}`;
-
+      style.innerHTML += `@media screen and (max-width:900px) { *::-webkit-scrollbar { width: 0; height: 0; } }`;
       SHADOW.appendChild(style);
     } catch {
       setTimeout(() => {
