@@ -1,3 +1,5 @@
+<img src="https://img.shields.io/npm/dt/ion-content-scrollbar?style=for-the-badge">
+
 This is a basic package for customize ion-content element's scrollbar style.
 
 Usage
